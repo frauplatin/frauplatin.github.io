@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<!-----page by arithemes/darthvcder
+ 
+                                CREDITS
+ 
+icon font by suiomi
+control fix by cyantists
+isotope combination filter tutorial by magnusthemes
+ 
+----->
+ 
+<head>
+ 
+ 
+ 
+    <title>Story Directory</title> <!-----change the title on the tab here----->
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+<!--don't touch ANYTHING from here to "end"-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/xd6ujov/9Rpouml9f/imagesloaded.pkgd.min.js"></script> 
+<script src="https://static.tumblr.com/f6blkfc/3khouzw5b/masonry.pkgd.min.js"></script>
+
+<link href="//solrainha.github.io/honeybee/honeybee.css" rel="stylesheet">
+
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".container"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".fic", // the elements to filter
+   percentPosition: false // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = []; 
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
+<!--end-->
+   
+   
+<link rel="stylesheet" href="css/styling.css">
+</head>
+
+<body>
+
+
+<center>
+<div id="title">
+    Atsudori directory <!--page title-->
+</div>
+
+<div id="nav">
+    <a href="https://ournotes.wiki" class="th th-home" title="home"></a> <!--home link. you don't need to change anything here.-->
+    <a href="https://tetratto.com/@atsudori" class="th th-paper-plane" title="ask"></a> <!--ask link. change /ask to whatever your page name is if you have an faq instead-->
+</div>
+</center>
+
+<div id="side">
+<div class="ffilters">
+
+<!--for the first group (general) you'll see the class "exclusive" after "filter option-set". this means that you can ONLY pick one filter in this category. if you wouldn't like that, delete ONLY the word "exclusive". to make the other categories work the same way (only one filter at a time from each category), just add the word "exclusive" after the words "filter option-set" but before the closing quotation mark.-->
+
+    <div class="ftitle"> <span class="th th-settings"></span> Story Type</div> <!--change "general" to whatever category you want, but i recommend these.-->
+
+    <div class="filter option-set exclusive" data-filter-group="gen">
+     <a href="#" data-filter-value="" class="fffilters selected">All</a><!--keep this one! important! only change "fics" if you're making this a book page-->
+     <a href="#" data-filter-value=".article" class="fffilters">Articles</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".intermission" class="fffilters">Intermissions</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".song" class="fffilters">Songs</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".event" class="fffilters">Event Story</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".card" class="fffilters">Card Story</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".oshitabi" class="fffilters">Oshitabi</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+     <a href="#" data-filter-value=".bilibili" class="fffilters">Bilibili</a> <!--change .fave to whatever filter you want if you're changing it. just pick a unique class that you can remember.-->
+
+     
+   </div>
+
+   
+ </div>
+ 
+ <div class="ffilters">
+ 
+    <div class="ftitle"> <span class="th th-settings"></span> Band</div> <!--change pairings to whatever filter group name you'd like-->
+   
+   <div class="filter option-set" data-filter-group="pairing">
+     <a href="#" data-filter-value="" class="fffilters selected">All Bands</a> <!--keep this here. only change the word "pairings" to whatever you'd like-->
+     <a href="#" data-filter-value=".filter1" class="fffilters">MyGO!!!!!</a> <!--change ".filter1" to an easy to remember class. for example for aziraphale/crowley fics, i made mine ".azcrow". make sure to keep the . !-->
+     <a href="#" data-filter-value=".filter2" class="fffilters">Ave Mujica</a> <!--again change ".filter2" to whatever you'd like, following the rules above-->
+     <a href="#" data-filter-value=".filter3" class="fffilters">Myugendai Mewtype</a> <!--change ".filter3"-->
+     <a href="#" data-filter-value=".filter4" class="fffilters">millsage</a> <!--change ".filter4"-->
+     <a href="#" data-filter-value=".filter4" class="fffilters">Ikka Dumb Rock!</a> <!--change ".filter4"-->
+     
+   </div>
+
+</div>
+
+<div class="ffilters">
+   
+   <div class="ftitle"> <span class="th th-settings"></span> Rating</div> <!--again change this if you want a different category-->
+   
+   <div class="filter option-set" data-filter-group="ratings"> 
+     <a href="#" data-filter-value="" class="fffilters selected">all ratings</a> <!--again, here only change the "ratings" portion-->
+     <a href="#" data-filter-value=".gen" class="fffilters">gen</a> <!--like the above, change ".gen" to whatever you'd like as long as you remember it, keeping in the . !-->
+     <a href="#" data-filter-value=".teen" class="fffilters">teen</a> <!--change ".teen"-->
+     <a href="#" data-filter-value=".mature" class="fffilters">mature</a> <!--change ".mature"-->
+     <a href="#" data-filter-value=".explicit" class="fffilters">explicit</a> <!--change ".explicit"-->
+   </div>
+   
+ </div>
+ </div>
+   
+
+
+
+</div>
+
+
+</div>
+
+
+<center>
+<div class="container">
+
+
+<!--rec template.-->
+
+<!--this will go through the instructions/code with you the copy/paste for more recs will be at the very bottom of the code though, this is not it-->
+
+<div class="fic filter1 explicit"> <!--here's where you'll categorize your fic. be sure to leave the "fic" filter! this is very important. but change filter1 to whatever filter you're using and explicit to whatever the rating is/whatever filter you've changed that to. for example if i wanted to use gen i'd just replace it with "gen" and so on.-->
+    
+    <div class="title">
+        <a href="fic link url">Fic One Title</a> <!--fic title-->
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div> <!--author name & website. for example i'll put (ao3) or (tumblr) or (livejournal) etc.-->
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary <!--fic summary. use html for this so if you want <i>italics</i> <b>bold</b> <strike>strike</strike> etc. after each line break you need to put <br><br> OR wrap each paragraph/line <p>like this</p>-->
+    </div>
+    
+    
+    <!--any of these can be changed so it doesn't have to be pairing, length, etc. just change the word.-->
+    
+    <div class="info">pairing</div> <!--pairing-->
+    <div class="info">fic length</div> <!--fic length like "51k"-->
+    <div class="info">rating</div> <!--rating-->
+    <div class="info">warnings</div> <!--warnings-->
+    
+    
+    
+</div>
+<!--end rec template-->
+
+<!--fave rec template-->
+
+<!--this one is the same as the above but if you want to mark something as a fave fic, this is the template you use! this will go through the instructions/code with you the copy/paste for more recs will be at the very bottom of the code though, this is not it-->
+
+<div class="fic filter2 gen fave">  <!--as above, change filter2 and gen but if you want a fave fic, keep in the word "fave"-->
+    
+    <div class="title">
+        <a href="fic link url">Fic Two Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website like ao3)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    <div class="th th-heart-1 faves"></div> <!--this is the other difference. keep this as it gives the little heart icon next to your tags! if you don't want this and just want the filter to mark it as fave without the icon, just delete this line-->
+    <div class="info">pairing</div>
+    <div class="info">fic length</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+    
+    
+</div>
+<!--end fave rec template-->
+
+<!--the rest are samples so you can see how the filtering works with many fics.--> 
+
+<!--rec-->
+<div class="fic filter3 mature">
+    
+    <div class="title">
+        <a href="fic link url">Fic Three Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter4 teen">
+    
+    <div class="title">
+        <a href="fic link url">Fic Four Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter3 explicit">
+    
+    <div class="title">
+        <a href="fic link url">Fic Five Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter2 mature fave">
+    
+    <div class="title">
+        <a href="fic link url">Fic Six Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    <div class="th th-heart-1 faves"></div>
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter1 gen">
+    
+    <div class="title">
+        <a href="fic link url">Fic Seven Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter4 explicit">
+    
+    <div class="title">
+        <a href="fic link url">Fic Eight Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter1 teen fave">
+    
+    <div class="title">
+        <a href="fic link url">Fic Nine Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    <div class="th th-heart-1 faves"></div>
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--rec-->
+<div class="fic filter2 gen">
+    
+    <div class="title">
+        <a href="fic link url">Fic Ten Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+<!--end rec-->
+
+<!--if you want to add more fics/whatever copy/paste the following after the last "end rec" but AFTER the > : 
+
+<div class="fic filter2 gen">
+    
+    <div class="title">
+        <a href="fic link url">Fic Ten Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+
+-->
+
+<!--and here is the template for favorite fics: 
+
+<div class="fic filter2 gen fave">
+    
+    <div class="title">
+        <a href="fic link url">Fic Ten Title</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> author (author website)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Fic Summary
+    </div>
+    
+    <div class="th th-heart-1 faves"></div>
+    <div class="info">pairing</div> 
+    <div class="info">fic length</div> 
+    <div class="info">rating</div> 
+    <div class="info">warnings</div> 
+    
+    
+    
+</div>
+
+-->
+
+
+
+</div>
+</center>
+    
+<!--DO NOT EDIT THIS EXCEPT FOR #8b1c91 TO CHANGE THE LINK COLOR-->
+
+ <div style="position:fixed; bottom:8px; right:15px; font-size: 15px;"><a style="color:#8b1c91; text-decoration:none; font-weight: bold" class= "th th-stars" href="http://arithemes.tumblr.com/"></a></center></div>
+    
+</body>

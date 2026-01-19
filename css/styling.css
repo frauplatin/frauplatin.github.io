@@ -1,0 +1,228 @@
+  /*FIX BY CYANTISTS*/
+iframe.tmblr-iframe {
+    z-index:99999999999999!important;
+    top:0!important;
+    right:0!important;
+    opacity:0.4;
+    /* delete from here */
+        filter:invert(1);
+        -webkit-filter:invert(1);
+        -o-filter:invert(1);
+        -moz-filter:invert(1);
+        -ms-filter:invert(1);
+    /* to here if your blog has a dark background */
+    transform:scale(0.6);
+    transform-origin:100% 0;
+    -webkit-transform:scale(0.6);
+    -webkit-transform-origin:100% 0;
+    -o-transform:scale(0.6);
+    -o-transform-origin:100% 0;
+    -moz-transform:scale(0.6);
+    -moz-transform-origin:100% 0;
+    -ms-transform:scale(0.6);
+    -ms-transform-origin:100% 0;}
+
+iframe.tmblr-iframe:hover {
+    opacity:0.6!important;} 
+   
+::-webkit-scrollbar-thumb {
+    background-color: #8b1c91; /*change the scrollbar color*/
+    height:auto;
+    border-bottom:none;
+}
+::-webkit-scrollbar {
+    height:9px;
+    width:5px;
+    background-color: transparent; 
+   
+}
+ 
+::selection {
+    background-color: #8b1c91; /*selection bg*/
+    color: #fcfcfc; /*selection text*/
+}
+   
+body {
+      background-color: #fcfcfc; /*background color*/
+      background-image: url(/); /*background url*/
+      background-repeat: repeat;
+      font-family: Karla;
+      line-height: 110%;
+      font-size: 11px;
+}
+ 
+     
+a {
+    
+    color: #8b1c91; /*link color*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9c9c9c; /*link hover color*/
+    -webkit-transition: 0.8s;
+      -moz-transition: 0.8s;
+      transition: 0.8s;
+}
+
+b {
+    color: #ff9f8c; /*bold color*/
+}
+
+
+#title {
+    font-size: 20px;
+    color: #8b1c91; /*title color*/
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#nav {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#nav a {
+    height: relative;
+    color: #8b1c91; /*home/ask/archive color*/
+    padding-right: 2px;
+    padding-left: 2px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+#nav a:hover {
+    color: #474646; /*home/ask/archive hover color*/
+}
+
+#side {
+    position: fixed;
+    margin-left: 50px;
+}
+
+.ffilters {
+    background-color: white; /*filter box background color*/
+    border: 1px solid #eee; /*filter box border color*/
+    border-radius: 5px;
+    width: 200px;
+    height: relative;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    margin-top: 20px;
+}
+
+.fffilters {
+    background-color: #fcfcfc; /*filter button bg color*/
+    color: #474646; /*filter button color*/
+    cursor: help;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #eeeeee; /*filter button border color*/
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: #8b1c91; /*selected filter bg color*/
+    color: white; /*selected filter color*/
+}
+
+.ftitle {
+    font-size: 14px;
+    background-color: #8b1c91; /*filter box title bg color*/
+    color: white; /*filter box title color*/
+    padding: 10px;
+    width: 200px;
+    height: relative;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+
+.container {
+    width: 1000px;
+    height: auto;
+    margin-left: 300px;
+    margin-bottom: 20px;
+}
+
+.fic {
+    width: 200px;
+    height: relative;
+    background-color: white; /*fic bg color*/
+    padding: 10px;
+    border: 1px solid #eeeeee; /*fic border color*/
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+  
+.title {
+    text-align: center;
+    background-color: #fcfcfc; /*fic title bg color*/
+    padding: 6px;
+    line-height: 1.5;
+    border: 1px solid #eeeeee; /*fic title border color*/
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.author {
+    font-size: 11px;
+    color: #474646; /*author color*/
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    border-top: 1px solid #eeeeee; /*border between title & author color*/
+    padding-top: 2px;
+}
+
+
+
+.summary {
+    background-color: #fcfcfc; /*summary bg color*/
+    padding: 6px;
+    color: #474646; /*summary text color*/
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid #eeeeee; /*summary border color*/
+    border-radius: 5px;
+    line-height: 140%;
+}
+
+.summary b {
+    color: #8b1c91; /*"summary:" color*/
+}
+
+.info {
+    background-color: #fcfcfc; /*fic tags bg color*/
+    padding: 6px;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #eeeeee; /*fic tags border color*/
+    border-radius: 5px;
+    color: #474646; /*fic tags text color*/
+}
+
+.faves {
+    background-color: #8b1c91; /*fave fic icon bg color*/
+    color: white; /*fave fic icon color*/
+    padding: 6px;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid white; /*fave fic icon border color*/
+    border-radius: 5px;
+}
