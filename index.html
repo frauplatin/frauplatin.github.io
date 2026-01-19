@@ -42,7 +42,7 @@ $(document).ready(function() {
  var filters = {}; //should be outside the scope of the filtering function
  /* --- read the documentation on isotope.metafizzy.co for more options --- */
  var $grid = $container.isotope({
-   itemSelector: ".fic", // the elements to filter
+   itemSelector: ".story", // the elements to filter
    percentPosition: false // put true if you use percentage widths, otherwise put false
  });
  $(".option-set a").click(function(e) {
@@ -152,78 +152,66 @@ $(document).ready(function() {
 <center>
 <div class="container">
 
-
-<!--rec template.-->
-
-<!--this will go through the instructions/code with you the copy/paste for more recs will be at the very bottom of the code though, this is not it-->
-
-<div class="fic filter1 explicit"> <!--here's where you'll categorize your fic. be sure to leave the "fic" filter! this is very important. but change filter1 to whatever filter you're using and explicit to whatever the rating is/whatever filter you've changed that to. for example if i wanted to use gen i'd just replace it with "gen" and so on.-->
+<!--rec-->
+<div class="story card mygo en">
     
     <div class="title">
-        <a href="fic link url">Fic One Title</a> <!--fic title-->
+        <a href="fic link url">A Singular, Lost Star</a>
         
         <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div> <!--author name & website. for example i'll put (ao3) or (tumblr) or (livejournal) etc.-->
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary <!--fic summary. use html for this so if you want <i>italics</i> <b>bold</b> <strike>strike</strike> etc. after each line break you need to put <br><br> OR wrap each paragraph/line <p>like this</p>-->
-    </div>
-    
-    
-    <!--any of these can be changed so it doesn't have to be pairing, length, etc. just change the word.-->
-    
-    <div class="info">pairing</div> <!--pairing-->
-    <div class="info">fic length</div> <!--fic length like "51k"-->
-    <div class="info">rating</div> <!--rating-->
-    <div class="info">warnings</div> <!--warnings-->
-    
-    
-    
-</div>
-<!--end rec template-->
-
-<!--fave rec template-->
-
-<!--this one is the same as the above but if you want to mark something as a fave fic, this is the template you use! this will go through the instructions/code with you the copy/paste for more recs will be at the very bottom of the code though, this is not it-->
-
-<div class="fic filter2 gen fave">  <!--as above, change filter2 and gen but if you want a fave fic, keep in the word "fave"-->
-    
-    <div class="title">
-        <a href="fic link url">Fic Two Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website like ao3)
+            <span class="th th-user"></span> Spade
         </div>
     </div>
     
     
     
     <div class="summary">
-        <b>Summary:</b> Fic Summary
+        Tomori Dreamfes 1 (Garupa)
     </div>
     
-    <div class="th th-heart-1 faves"></div> <!--this is the other difference. keep this as it gives the little heart icon next to your tags! if you don't want this and just want the filter to mark it as fave without the icon, just delete this line-->
-    <div class="info">pairing</div>
-    <div class="info">fic length</div>
-    <div class="info">rating</div>
-    <div class="info">warnings</div>
+    
+    <div class="info">garupa</div> 
+    <div class="info">mygo</div> 
+    <div class="info">card story</div> 
+    <div class="info">en</div> 
+
+</div>
+<!--rec-->
+
+<!--rec-->
+<div class="story intermission mujica no">
+    
+    <div class="title">
+        <a href="fic link url">Veritas</a>
+        
+        <div class="author">
+            <span class="th th-user"></span> N/A
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        From Ave Mujica 3rd LIVE
+    </div>
+    
+    
+    <div class="info">intermission</div> 
+    <div class="info">mujica</div> 
+    <div class="info">no TL</div>
     
     
     
 </div>
-<!--end fave rec template-->
+<!--rec-->
 
 <!--the rest are samples so you can see how the filtering works with many fics.--> 
 
 <!--rec-->
-<div class="fic filter3 mature">
+<div class="story filter3 mature">
     
     <div class="title">
-        <a href="fic link url">Fic Three Title</a>
+        <a href="fic link url">Story Three Title</a>
         
         <div class="author">
             <span class="th th-user"></span> author (author website)
@@ -233,7 +221,7 @@ $(document).ready(function() {
     
     
     <div class="summary">
-        <b>Summary:</b> Fic Summary
+        <b>Summary:</b> Story Summary
     </div>
     
     
@@ -248,10 +236,10 @@ $(document).ready(function() {
 <!--end rec-->
 
 <!--rec-->
-<div class="fic filter4 teen">
+<div class="story filter4 teen">
     
     <div class="title">
-        <a href="fic link url">Fic Four Title</a>
+        <a href="fic link url">Story Four Title</a>
         
         <div class="author">
             <span class="th th-user"></span> author (author website)
@@ -261,12 +249,12 @@ $(document).ready(function() {
     
     
     <div class="summary">
-        <b>Summary:</b> Fic Summary
+        <b>Summary:</b> Story Summary
     </div>
     
     
     <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
+    <div class="info">Story length</div> 
     <div class="info">rating</div> 
     <div class="info">warnings</div> 
     
@@ -276,10 +264,10 @@ $(document).ready(function() {
 <!--end rec-->
 
 <!--rec-->
-<div class="fic filter3 explicit">
+<div class="story filter3 explicit">
     
     <div class="title">
-        <a href="fic link url">Fic Five Title</a>
+        <a href="fic link url">Story Five Title</a>
         
         <div class="author">
             <span class="th th-user"></span> author (author website)
@@ -289,152 +277,12 @@ $(document).ready(function() {
     
     
     <div class="summary">
-        <b>Summary:</b> Fic Summary
+        <b>Summary:</b> Story Summary
     </div>
     
     
     <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
-    <div class="info">rating</div> 
-    <div class="info">warnings</div> 
-    
-    
-    
-</div>
-<!--end rec-->
-
-<!--rec-->
-<div class="fic filter2 mature fave">
-    
-    <div class="title">
-        <a href="fic link url">Fic Six Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div>
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary
-    </div>
-    
-    <div class="th th-heart-1 faves"></div>
-    <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
-    <div class="info">rating</div> 
-    <div class="info">warnings</div> 
-    
-    
-    
-</div>
-<!--end rec-->
-
-<!--rec-->
-<div class="fic filter1 gen">
-    
-    <div class="title">
-        <a href="fic link url">Fic Seven Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div>
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary
-    </div>
-    
-    
-    <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
-    <div class="info">rating</div> 
-    <div class="info">warnings</div> 
-    
-    
-    
-</div>
-<!--end rec-->
-
-<!--rec-->
-<div class="fic filter4 explicit">
-    
-    <div class="title">
-        <a href="fic link url">Fic Eight Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div>
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary
-    </div>
-    
-    
-    <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
-    <div class="info">rating</div> 
-    <div class="info">warnings</div> 
-    
-    
-    
-</div>
-<!--end rec-->
-
-<!--rec-->
-<div class="fic filter1 teen fave">
-    
-    <div class="title">
-        <a href="fic link url">Fic Nine Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div>
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary
-    </div>
-    
-    <div class="th th-heart-1 faves"></div>
-    <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
-    <div class="info">rating</div> 
-    <div class="info">warnings</div> 
-    
-    
-    
-</div>
-<!--end rec-->
-
-<!--rec-->
-<div class="fic filter2 gen">
-    
-    <div class="title">
-        <a href="fic link url">Fic Ten Title</a>
-        
-        <div class="author">
-            <span class="th th-user"></span> author (author website)
-        </div>
-    </div>
-    
-    
-    
-    <div class="summary">
-        <b>Summary:</b> Fic Summary
-    </div>
-    
-    
-    <div class="info">pairing</div> 
-    <div class="info">fic length</div> 
+    <div class="info">Story length</div> 
     <div class="info">rating</div> 
     <div class="info">warnings</div> 
     
@@ -445,7 +293,7 @@ $(document).ready(function() {
 
 <!--if you want to add more fics/whatever copy/paste the following after the last "end rec" but AFTER the > : 
 
-<div class="fic filter2 gen">
+<div class="story filter2 gen">
     
     <div class="title">
         <a href="fic link url">Fic Ten Title</a>
@@ -475,7 +323,7 @@ $(document).ready(function() {
 
 <!--and here is the template for favorite fics: 
 
-<div class="fic filter2 gen fave">
+<div class="story filter2 gen fave">
     
     <div class="title">
         <a href="fic link url">Fic Ten Title</a>
